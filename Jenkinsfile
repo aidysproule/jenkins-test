@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building.. My NodeJS App'
+                echo 'Building..'
             }
         }
         stage('Test') {
