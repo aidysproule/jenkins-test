@@ -7,10 +7,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building.. ${env.BUILD_NUMBER}"
-                echo "Creds ${EXAMPLE_CREDS_USR}"
-                echo "Creds ${EXAMPLE_CREDS_PSW}"
-                echo 'Creds ${EXAMPLE_CREDS_USR}'
-                echo 'Creds ${EXAMPLE_CREDS_PSW}'
+                sh("curl -u ${EXAMPLE_CREDS_USR}:${EXAMPLE_CREDS_PSW} https://example.com/")
+                sh('curl -u $EXAMPLE_CREDS_USR:$EXAMPLE_CREDS_PSW https://example.com/')
             }
         }
         stage('Test') {
