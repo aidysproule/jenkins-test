@@ -9,8 +9,8 @@ pipeline {
                 echo "Building.. ${env.BUILD_NUMBER}"
                 echo "Creds ${EXAMPLE_CREDS_USR}"
                 echo "Creds ${EXAMPLE_CREDS_PSW}"
-                echo "Creds $EXAMPLE_CREDS_USR"
-                echo "Creds $EXAMPLE_CREDS_PSW"
+                echo 'Creds $EXAMPLE_CREDS_USR'
+                echo 'Creds $EXAMPLE_CREDS_PSW'
             }
         }
         stage('Test') {
